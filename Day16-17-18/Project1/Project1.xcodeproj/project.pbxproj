@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E162D4F929E34FE4001320E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162D4F829E34FE4001320E1 /* DetailViewController.swift */; };
 		E173705929E204C80028316C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173705829E204C80028316C /* AppDelegate.swift */; };
 		E173705B29E204C80028316C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173705A29E204C80028316C /* SceneDelegate.swift */; };
 		E173705D29E204C80028316C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173705C29E204C80028316C /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E162D4F829E34FE4001320E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E173705529E204C80028316C /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E173705829E204C80028316C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E173705A29E204C80028316C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				E173705829E204C80028316C /* AppDelegate.swift */,
 				E173705A29E204C80028316C /* SceneDelegate.swift */,
+				E162D4F829E34FE4001320E1 /* DetailViewController.swift */,
 				E173705C29E204C80028316C /* ViewController.swift */,
 				E173705E29E204C80028316C /* Main.storyboard */,
 				E173706129E204CA0028316C /* Assets.xcassets */,
@@ -189,6 +192,7 @@
 				E173705D29E204C80028316C /* ViewController.swift in Sources */,
 				E173705929E204C80028316C /* AppDelegate.swift in Sources */,
 				E173705B29E204C80028316C /* SceneDelegate.swift in Sources */,
+				E162D4F929E34FE4001320E1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
