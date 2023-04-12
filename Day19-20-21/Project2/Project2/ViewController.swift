@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var countries = [String]()
     var score = 0
+    var correctAnswer = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +38,42 @@ class ViewController: UIViewController {
         button.layer.borderWidth = 1
     }
     
-    func askQuestion() {
-        let buttons = [button1, button2, button3]
+    func askQuestion(action: UIAlertAction? = nil) {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+        
+        let buttons = [button1: 0, button2: 1, button3: 2]
         
         for button in buttons {
-            button?.setImage(UIImage(named: countries.randomElement() ?? "us"), for: .normal)
+            button.key?.setImage(UIImage(named: countries[button.value]), for: .normal)
         }
+        
+        title = countries[correctAnswer].uppercased()
+    }
+    
+    func dimButtonAlpha(button sender: UIButton) {
+        sender.alpha = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            sender.alpha = 1
+        }
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        var title: String
+        
+        if sender.tag == correctAnswer {
+            title = "Correct"
+            score += 1
+        } else {
+            title = "Wrong"
+            score -= 1
+        }
+        
+        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        present(ac, animated: true)
+        
+        dimButtonAlpha(button: sender)
     }
 }
 
