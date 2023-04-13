@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionsAsked = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
             button.key?.setImage(UIImage(named: countries[button.value]), for: .normal)
         }
         
-        title = countries[correctAnswer].uppercased()
+        title = "\(countries[correctAnswer].uppercased()) - SCORE: \(score)"
     }
     
     func dimButtonAlpha(button sender: UIButton) {
@@ -58,22 +59,46 @@ class ViewController: UIViewController {
         }
     }
     
+    func prefixCountyNameCorrectly(country: String) -> String {
+        let countryLowercased = country.lowercased()
+        
+        if countryLowercased.hasPrefix("uk") || countryLowercased.hasPrefix("us") {
+            return country.uppercased()
+        }
+        
+        return country.capitalized
+    }
+    
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
+        var message: String
+        
+        questionsAsked += 1
+        
+        if questionsAsked == 10 {
+            showAlert(title: "Congrats!", message: "You've answered \(questionsAsked) questions.", handler: askQuestion)
+            questionsAsked = 0
+        }
         
         if sender.tag == correctAnswer {
             title = "Correct"
+            message = "Your score is \(score)"
             score += 1
         } else {
             title = "Wrong"
+            message = "That's incorrect! That's the flag of \(prefixCountyNameCorrectly(country: countries[sender.tag]))."
             score -= 1
         }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        present(ac, animated: true)
+        showAlert(title: title, message: message, handler: askQuestion)
         
         dimButtonAlpha(button: sender)
+    }
+    
+    func showAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)?) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: handler))
+        present(ac, animated: true)
     }
 }
 
