@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(displayScore))
         
         let buttons = [button1, button2, button3]
         
@@ -98,6 +99,12 @@ class ViewController: UIViewController {
     func showAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)?) {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: handler))
+        present(ac, animated: true)
+    }
+    
+    @objc func displayScore() {
+        let ac = UIActivityViewController(activityItems: ["Your current score is \(score)."], applicationActivities: [])
+        ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(ac, animated: true)
     }
 }

@@ -15,7 +15,6 @@ class ViewController: UITableViewController {
         
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommend))
         
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
@@ -49,12 +48,6 @@ class ViewController: UITableViewController {
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    @objc func recommend() {
-        let ac = UIActivityViewController(activityItems: ["Recommend Storm Viewer App"], applicationActivities: [])
-        ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        present(ac, animated: true)
     }
 }
 
