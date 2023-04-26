@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E179EA5929F94B1E005C00CF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E179EA5829F94B1E005C00CF /* DetailViewController.swift */; };
 		E1D2A82E29F7F2AE00676EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2A82D29F7F2AE00676EE3 /* AppDelegate.swift */; };
 		E1D2A83029F7F2AE00676EE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2A82F29F7F2AE00676EE3 /* SceneDelegate.swift */; };
 		E1D2A83229F7F2AE00676EE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2A83129F7F2AE00676EE3 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E179EA5829F94B1E005C00CF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E1D2A82A29F7F2AE00676EE3 /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D2A82D29F7F2AE00676EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D2A82F29F7F2AE00676EE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				E1D2A83629F7F2AF00676EE3 /* Assets.xcassets */,
 				E1D2A83829F7F2AF00676EE3 /* LaunchScreen.storyboard */,
 				E1D2A83B29F7F2AF00676EE3 /* Info.plist */,
+				E179EA5829F94B1E005C00CF /* DetailViewController.swift */,
 			);
 			path = Project7;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				E1D2A83229F7F2AE00676EE3 /* ViewController.swift in Sources */,
 				E1D2A82E29F7F2AE00676EE3 /* AppDelegate.swift in Sources */,
 				E1D2A83029F7F2AE00676EE3 /* SceneDelegate.swift in Sources */,
+				E179EA5929F94B1E005C00CF /* DetailViewController.swift in Sources */,
 				E1D2A84229F7F64100676EE3 /* Petiton.swift in Sources */,
 				E1D2A84429F7F6B800676EE3 /* Petitions.swift in Sources */,
 			);
