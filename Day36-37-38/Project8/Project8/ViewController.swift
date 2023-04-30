@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     var activatedButtons = [UIButton]()
     var solutions = [String]()
+    var numberOfItemsMatched = 0
     
     var score = 0 {
         didSet {
@@ -85,6 +86,8 @@ class ViewController: UIViewController {
                 letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
                 letterButton.setTitle("WWW", for: .normal)
                 letterButton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
+                letterButton.layer.borderColor = UIColor.lightGray.cgColor
+                letterButton.layer.borderWidth = 1
                 let frame = CGRect(x: col * width, y: row * height, width: width, height: height)
                 letterButton.frame = frame
                 buttonContainer.addSubview(letterButton)
@@ -191,9 +194,14 @@ class ViewController: UIViewController {
             
             if score % 7 == 0 {
                 showAlert(title: "Well done!", message: "Are you ready for the next level?", handler: levelUp, actionTitle: "Let's go!")
+                score = 0
             }
         } else {
             showAlert(title: "Whoops!", message: "That's the wrong answer.", actionTitle: "OK")
+            
+            if score > 0 {
+                score -= 1
+            }
         }
     }
     
