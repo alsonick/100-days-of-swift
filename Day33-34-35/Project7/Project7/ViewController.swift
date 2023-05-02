@@ -54,15 +54,23 @@ class ViewController: UITableViewController {
         let ac = UIAlertController(title: "Filter Petitions", message: nil, preferredStyle: .alert)
         ac.addTextField()
         
+
+        
         let filterAction = UIAlertAction(title: "Filter", style: .default) { action in
             guard let filterText = ac.textFields?[0].text else { return }
-            // Assume it works
-            for petition in self.petitions {
-                if petition.title.lowercased().contains(filterText.lowercased()) {
-                    self.filteredPetitions.append(petition)
-                    self.petitions = self.filteredPetitions
-                    self.tableView.reloadData()
+            
+            DispatchQueue.global(qos: .background).async {
+                for petition in self.petitions {
+                    if petition.title.lowercased().contains(filterText.lowercased()) {
+                        self.filteredPetitions.append(petition)
+                        self.petitions = self.filteredPetitions
+                        
+                    }
                 }
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
         
