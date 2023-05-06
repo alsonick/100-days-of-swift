@@ -21,6 +21,7 @@ class ViewController: UICollectionViewController {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
+        picker.sourceType = .camera
         present(picker, animated: true)
     }
     
@@ -60,18 +61,32 @@ class ViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let person = people[indexPath.item]
         
-        let ac = UIAlertController(title: "Rename Person", message: nil, preferredStyle: .alert)
-        ac.addTextField()
         
-        ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
-            guard let newName = ac?.textFields?[0].text else { return }
-            person.name = newName
-            self?.collectionView.reloadData()
-        })
+        // Prompt the user asking weather they want to rename the person or delete them
+        let promptAlert = UIAlertController(title: "\(person.name) was selected", message: "Would you like to rename or delete this person?", preferredStyle: .alert)
         
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        promptAlert.addAction(UIAlertAction(title: "Rename", style: .default, handler: { _ in
+            // Rename person
+            let ac = UIAlertController(title: "Rename Person", message: nil, preferredStyle: .alert)
+            ac.addTextField()
+            
+            ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
+                guard let newName = ac?.textFields?[0].text else { return }
+                person.name = newName
+                self?.collectionView.reloadData()
+            })
+            
+            ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            
+            self.present(ac, animated: true)
+        }))
         
-        present(ac, animated: true)
+        promptAlert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+            self.people.remove(at: indexPath.item)
+            self.collectionView.reloadData()
+        }))
+        
+        present(promptAlert, animated: true)
     }
 }
 
