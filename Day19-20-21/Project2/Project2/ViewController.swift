@@ -7,6 +7,8 @@
 
 import UIKit
 
+// Finish this tm
+
 class ViewController: UIViewController {
 
     @IBOutlet var button1: UIButton!
@@ -17,6 +19,8 @@ class ViewController: UIViewController {
     var score = 0
     var correctAnswer = 0
     var questionsAsked = 0
+    
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,8 @@ class ViewController: UIViewController {
         }
         
         askQuestion()
+        
+        
     }
     
     func addBorderToButton(_ button: UIButton) {
@@ -75,6 +81,16 @@ class ViewController: UIViewController {
         var message: String
         
         questionsAsked += 1
+        
+        
+        let highScore = defaults.integer(forKey: "highScore")
+    
+        if score > highScore {
+            showAlert(title: "Congrats!", message: "New high score!", handler: nil)
+        }
+        
+        print(highScore)
+        print(score)
         
         if questionsAsked == 10 {
             showAlert(title: "Congrats!", message: "You've answered \(questionsAsked) questions.", handler: askQuestion)
