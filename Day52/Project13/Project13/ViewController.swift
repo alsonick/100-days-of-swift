@@ -15,6 +15,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     var currentImage: UIImage!
     
+    var selectedControl = "Intensity"
+    
     // Core Image
     var context: CIContext!
     var currentFilter: CIFilter!
@@ -96,12 +98,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        title = actionTitle
         
         applyProcessing()
     }
     
     
     @IBAction func save(_ sender: UIButton) {
+        guard let _ = currentImage else {
+            let ac = UIAlertController(title: "Missing Image", message: nil, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+            return
+        }
     }
     
     @IBAction func intensityChanged(_ sender: UISlider) {
