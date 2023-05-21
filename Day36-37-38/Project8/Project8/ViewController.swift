@@ -7,8 +7,6 @@
 
 import UIKit
 
-// Complete Day 58 Challenge tm
-
 class ViewController: UIViewController {
     
     var cluesLabel: UILabel!
@@ -169,11 +167,13 @@ class ViewController: UIViewController {
     }
     
     @objc func letterTapped(_ sender: UIButton) {
-        UIView.animate(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, animations: <#T##() -> Void#>)
+        sender.alpha = 0.5
+        UIView.animate(withDuration: 1, delay: 0) {
+            sender.alpha = 1
+        }
         guard let buttonTitle = sender.titleLabel?.text else { return }
         currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
     }
     
     @objc func submitTapped(_ sender: UIButton) {

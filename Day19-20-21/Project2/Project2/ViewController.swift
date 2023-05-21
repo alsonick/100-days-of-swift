@@ -82,6 +82,10 @@ class ViewController: UIViewController {
         
         questionsAsked += 1
         
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 4) {
+            sender.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            sender.transform = .identity
+        }
         
         let highScore = defaults.integer(forKey: "highScore")
     
