@@ -64,6 +64,12 @@ class ViewController: UIViewController {
         
         center.setNotificationCategories([category])
     }
+    
+    func showAlert(title: String?, message: String?) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
 }
 
 extension ViewController: UNUserNotificationCenterDelegate {
@@ -76,9 +82,9 @@ extension ViewController: UNUserNotificationCenterDelegate {
             switch response.actionIdentifier {
             case UNNotificationDefaultActionIdentifier:
                 // User swiped to unlock
-                print("Default Identifier")
+                showAlert(title: "Notification Identifier", message: "Default")
             case "show":
-                print("Show more information...")
+                showAlert(title: "Notification Identifier", message: "Show more information...")
             default:
                 break
             }
