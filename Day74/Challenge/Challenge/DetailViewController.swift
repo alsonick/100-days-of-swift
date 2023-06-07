@@ -22,16 +22,21 @@ class DetailViewController: UIViewController {
         
         textView.delegate = self
         textView.text = ""
-        
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancel))
+    
+        let activityButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: nil)
         let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(save))
         
-        if textView.text == "" {
-            saveButton.isEnabled = false
-        }
+        navigationItem.rightBarButtonItems = [saveButton, activityButton]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        navigationItem.leftBarButtonItem = cancelButton
-        navigationItem.rightBarButtonItem = saveButton
+        for toolBarItem in navigationItem.rightBarButtonItems! {
+            if textView.text == "" {
+                toolBarItem.isEnabled = false
+            }
+        }
     }
     
     @objc func cancel() {
@@ -60,7 +65,7 @@ class DetailViewController: UIViewController {
         let note = Note(content: textView.text)
         notes?.insert(note, at: 0)
         saved = true
-        
+
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
         navigationController?.popViewController(animated: true)
     }
@@ -73,7 +78,8 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        let saveNavigationBarButtonItem = navigationItem.rightBarButtonItem
-        saveNavigationBarButtonItem?.isEnabled = textView.text != "" ? true : false
+        for toolBarItem in navigationItem.rightBarButtonItems! {
+            toolBarItem.isEnabled = textView.text != "" ? true : false
+        }
     }
 }

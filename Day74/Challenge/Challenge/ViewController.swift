@@ -7,18 +7,32 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UIViewController {
+    
+    @IBOutlet var toolbar: UIToolbar!
+    @IBOutlet var tableView: UITableView!
     
     var notes = [Note]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(loadNotes), name: NSNotification.Name(rawValue: "load"), object: nil)
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNote))
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let compose = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addNote))
+        
+        toolbar.items = [spacer, compose]
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loadNotes), name: NSNotification.Name(rawValue: "load"), object: nil)
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Notes"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(notes)
     }
     
     func navigateToDetailViewController() {
@@ -29,26 +43,33 @@ class ViewController: UITableViewController {
     }
     
     @objc func loadNotes(notification: NSNotification) {
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
+//        let indexPath = IndexPath(row: 0, section: 0)
+//        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.reloadData()
     }
     
     @objc func addNote() {
         navigateToDetailViewController()
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
-    }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = "New Note"
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return notes.count
+    }
+}
