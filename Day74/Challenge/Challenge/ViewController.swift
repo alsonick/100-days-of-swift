@@ -22,8 +22,12 @@ class ViewController: UIViewController {
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let compose = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addNote))
+        let notes = UIBarButtonItem(title: "\(notes.count) notes", style: .plain, target: self, action: nil)
         
-        toolbar.items = [spacer, compose]
+        notes.tintColor = .black
+        notes.isEnabled = false
+        
+        toolbar.items = [spacer, notes, spacer, compose]
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNotes), name: NSNotification.Name(rawValue: "load"), object: nil)
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -38,7 +42,8 @@ class ViewController: UIViewController {
     func navigateToDetailViewController() {
         if let detailViewController = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController {
             detailViewController.notes = notes
-            navigationController?.pushViewController(detailViewController, animated: true)
+//            navigationController?.pushViewController(detailViewController, animated: true)
+            present(detailViewController, animated: true)
         }
     }
     

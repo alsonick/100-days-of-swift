@@ -11,6 +11,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet var toolbar: UIToolbar!
     @IBOutlet var textView: UITextView!
     
     var notes: [Note]?
@@ -23,20 +24,32 @@ class DetailViewController: UIViewController {
         textView.delegate = self
         textView.text = ""
     
-        let activityButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: nil)
+        let activityButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showActivitViewController))
         let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(save))
         
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let notes = UIBarButtonItem(title: "\(notes?.count ?? 0) notes", style: .plain, target: self, action: nil)
+        
+        notes.tintColor = .black
+        notes.isEnabled = false
+        
         navigationItem.rightBarButtonItems = [saveButton, activityButton]
+        toolbar.items = [spacer, notes, spacer]
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         for toolBarItem in navigationItem.rightBarButtonItems! {
             if textView.text == "" {
                 toolBarItem.isEnabled = false
             }
         }
+    }
+    
+    @objc func showActivitViewController() {
+        let items = [textView.text]
+        let ac = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
+        present(ac, animated: true)
     }
     
     @objc func cancel() {

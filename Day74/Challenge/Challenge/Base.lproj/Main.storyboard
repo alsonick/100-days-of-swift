@@ -16,12 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh2-0R-xg1">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
-                                <items/>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cXY-nR-LIg">
-                                <rect key="frame" x="0.0" y="78" width="393" height="696"/>
+                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="M5S-mG-Y8P">
@@ -34,17 +30,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uh2-0R-xg1">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <items/>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g6F-7L-odd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Uh2-0R-xg1" firstAttribute="bottom" secondItem="g6F-7L-odd" secondAttribute="bottom" id="3uP-KB-9yc"/>
+                            <constraint firstItem="cXY-nR-LIg" firstAttribute="top" secondItem="5gg-IK-UQi" secondAttribute="top" constant="155" id="4RB-d6-0XV"/>
                             <constraint firstItem="Uh2-0R-xg1" firstAttribute="leading" secondItem="5gg-IK-UQi" secondAttribute="leading" id="EBC-nj-RhR"/>
-                            <constraint firstItem="g6F-7L-odd" firstAttribute="bottom" secondItem="cXY-nR-LIg" secondAttribute="bottom" constant="44" id="Q5P-QS-8Zt"/>
-                            <constraint firstItem="cXY-nR-LIg" firstAttribute="leading" secondItem="g6F-7L-odd" secondAttribute="leading" id="kdV-Wb-5sX"/>
+                            <constraint firstItem="cXY-nR-LIg" firstAttribute="leading" secondItem="g6F-7L-odd" secondAttribute="leading" id="cLK-Rf-x4h"/>
+                            <constraint firstItem="cXY-nR-LIg" firstAttribute="trailing" secondItem="g6F-7L-odd" secondAttribute="trailing" id="ddp-Bq-evY"/>
+                            <constraint firstItem="Uh2-0R-xg1" firstAttribute="top" secondItem="cXY-nR-LIg" secondAttribute="bottom" id="n7b-cl-1FV"/>
                             <constraint firstItem="Uh2-0R-xg1" firstAttribute="trailing" secondItem="5gg-IK-UQi" secondAttribute="trailing" id="pGN-c7-O7y"/>
-                            <constraint firstItem="cXY-nR-LIg" firstAttribute="centerY" secondItem="5gg-IK-UQi" secondAttribute="centerY" id="pGx-de-7Ax"/>
-                            <constraint firstItem="cXY-nR-LIg" firstAttribute="trailing" secondItem="5gg-IK-UQi" secondAttribute="trailing" id="ymm-h5-dfk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fOn-is-stM"/>
@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="1347.3282442748091" y="-116.19718309859155"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Title-->
         <scene sceneID="F03-0K-Wsq">
             <objects>
                 <viewController storyboardIdentifier="Detail" id="VtA-4B-Z6O" customClass="DetailViewController" customModule="Challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,18 +73,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc0-Yz-lm4">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" id="UwQ-vG-5cS"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bfM-VV-4qW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PfG-9K-ud3" firstAttribute="top" secondItem="bfM-VV-4qW" secondAttribute="top" id="1TZ-4l-KwD"/>
+                            <constraint firstItem="Rc0-Yz-lm4" firstAttribute="leading" secondItem="bfM-VV-4qW" secondAttribute="leading" id="508-s5-BwM"/>
                             <constraint firstItem="PfG-9K-ud3" firstAttribute="leading" secondItem="bfM-VV-4qW" secondAttribute="leading" constant="20" id="D9R-Gw-uva"/>
                             <constraint firstItem="PfG-9K-ud3" firstAttribute="trailing" secondItem="bfM-VV-4qW" secondAttribute="trailing" constant="-20" id="Ob1-Tz-u2q"/>
                             <constraint firstItem="PfG-9K-ud3" firstAttribute="bottom" secondItem="bfM-VV-4qW" secondAttribute="bottom" id="SvZ-tj-ads"/>
+                            <constraint firstItem="Rc0-Yz-lm4" firstAttribute="trailing" secondItem="bfM-VV-4qW" secondAttribute="trailing" id="hGd-gy-oms"/>
+                            <constraint firstItem="Rc0-Yz-lm4" firstAttribute="bottom" secondItem="bfM-VV-4qW" secondAttribute="bottom" id="oRe-7f-iWo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="L4Y-IN-Vu5"/>
                     <connections>
                         <outlet property="textView" destination="PfG-9K-ud3" id="2QN-Sd-SJk"/>
+                        <outlet property="toolbar" destination="Rc0-Yz-lm4" id="zsw-Rz-9WW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUi-MO-RYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,8 +107,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hKB-8j-HQ7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f8t-UX-FO5">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="f8t-UX-FO5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
