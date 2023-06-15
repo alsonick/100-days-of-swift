@@ -19,13 +19,38 @@ class ViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(importPicture))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showConnectionPrompt))
+        let devices = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: nil)
+        let pictures = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(importPicture))
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showConnectionPrompt))
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+
+        navigationItem.leftBarButtonItem = devices
+        navigationItem.rightBarButtonItems = [pictures, add]
         title = "Selfie Share"
         
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession?.delegate = self
         
+    }
+    
+    @objc func showConnectedDevices() {
+        guard let mcSession = mcSession else { return }
+        
+        var connectedPeers = [String]()
+        
+        for peer in mcSession.connectedPeers {
+            connectedPeers.append(peer.displayName)
+        }
+        
+        var connectedPeersString = ""
+        
+        for peer in connectedPeers {
+            connectedPeersString += "\(peer)-"
+        }
+        
+        let ac = UIAlertController(title: "Connected Devices", message: connectedPeersString, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
     }
     
     @objc func showConnectionPrompt() {
@@ -127,6 +152,10 @@ extension ViewController: MCBrowserViewControllerDelegate {
             print("Connecting: \(peerID.displayName)")
         case .notConnected:
             print("Not Connected: \(peerID.displayName)")
+            
+            let ac = UIAlertController(title: "Disconnected from network", message: nil, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
         @unknown default:
             print("Unknown state received: \(peerID.displayName)")
         }
