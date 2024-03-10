@@ -4,6 +4,8 @@
 
 https://notnick.io/challenge/100-days-of-swift
 
+https://www.hackingwithswift.com/100
+
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
