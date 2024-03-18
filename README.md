@@ -17,4 +17,4 @@ https://www.hackingwithswift.com/100
 | 1   | variables, simple data types, and string interpolation | ✅       | Preview not available. |
 | 2   | arrays, dictionaries, sets, and enums | ✅       | Preview not available. |
 | 3   | operators and conditions | ✅       | Preview not available. |
-| 3   | loops, loops, and more loops | ✅       | Preview not available. |
+| 4   | loops, loops, and more loops | ✅       | Preview not available. |
