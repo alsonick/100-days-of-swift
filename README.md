@@ -9,7 +9,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 4              | 96       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 5              | 95       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -18,3 +18,4 @@ https://www.hackingwithswift.com/100
 | 2   | arrays, dictionaries, sets, and enums | ✅       | Preview not available. |
 | 3   | operators and conditions | ✅       | Preview not available. |
 | 4   | loops, loops, and more loops | ✅       | Preview not available. |
+| 5   | functions, parameters, and errors | ✅       | Preview not available. |
