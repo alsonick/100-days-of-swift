@@ -1,4 +1,6 @@
-# 100-days-of-swift
+# 100 Days of Swift (HackingWithSwift)
+
+This repository is a collection of all the projects and solutions from Paul Hudson's 100 days of swift challenge.
 
 **Useful links:**
 
