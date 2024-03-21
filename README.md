@@ -11,7 +11,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 6              | 94       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 7              | 93       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -22,3 +22,4 @@ https://www.hackingwithswift.com/100
 | 4   | loops, loops, and more loops | ✅       | Preview not available. |
 | 5   | functions, parameters, and errors | ✅       | Preview not available. |
 | 6   | closures part one | ✅       | Preview not available. |
+| 7   | closures part two | ✅       | Preview not available. |
