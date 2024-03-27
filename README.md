@@ -11,7 +11,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 12              | 88       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 13              | 87       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -28,3 +28,4 @@ https://www.hackingwithswift.com/100
 | 10   | classes and inheritance | ✅       | Preview not available. |
 | 11   | protocols, extensions, and protocol extensions | ✅       | Preview not available. |
 | 12   | optionals, unwrapping, and typecasting | ✅       | Preview not available. |
+| 13   | Swift review, day one | ✅       | Preview not available. |
