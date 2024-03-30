@@ -11,7 +11,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 15              | 85       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 16              | 84       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -31,3 +31,4 @@ https://www.hackingwithswift.com/100
 | 13   | Swift review, day one | ✅       | Preview not available. |
 | 14   | Swift review, day two | ✅       | Preview not available. |
 | 15   | Swift review, day three | ✅       | Preview not available. |
+| 16   | Project 1, part one | ✅       | Preview not available. |
