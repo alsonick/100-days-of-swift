@@ -1,5 +1,3 @@
-
-https://github.com/alsonick/100-days-of-swift/assets/101022772/a1d3ae2d-8548-404a-a7d1-9d6c88758f9f
 # 100 Days of Swift (HackingWithSwift)
 
 This repository is a collection of all the projects and solutions from Paul Hudson's 100 days of swift challenge.
