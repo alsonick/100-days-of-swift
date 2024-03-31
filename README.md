@@ -34,7 +34,8 @@ https://www.hackingwithswift.com/100
 | 14   | Swift review, day two | ✅       | Preview not available. |
 | 15   | Swift review, day three | ✅       | Preview not available. |
 | 16   | Project 1, part one | ✅       | <img width="244" alt="Screenshot 2024-03-30 at 12 44 51" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/968f2c06-2727-4467-b59a-4e1e13b13a03"> |
-| 17   | Project 1, part two | ✅       |  https://github.com/alsonick/100-days-of-swift/assets/101022772/e483fa24-8152-4c22-80b8-f1fd0e3e8306 |
+| 17   | Project 1, part two | ✅       |  ![Screen Recording 2024-03-31 at 12 34 18](https://github.com/alsonick/100-days-of-swift/assets/101022772/505420bd-424b-4b57-a2ba-e95f49b7057b) |
+
 
 
 
