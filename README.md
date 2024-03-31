@@ -11,7 +11,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 16              | 84       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 17              | 83       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -32,3 +32,4 @@ https://www.hackingwithswift.com/100
 | 14   | Swift review, day two | ✅       | Preview not available. |
 | 15   | Swift review, day three | ✅       | Preview not available. |
 | 16   | Project 1, part one | ✅       | <img width="244" alt="Screenshot 2024-03-30 at 12 44 51" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/968f2c06-2727-4467-b59a-4e1e13b13a03"> |
+| 17   | Project 1, part two | ✅       | Preview not available. |
