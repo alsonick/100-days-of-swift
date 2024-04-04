@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     
+    var questionsAnswered = 0
     var countries = [String]()
     var correctAnswer = 0
     var score = 0
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = countries[correctAnswer].uppercased()
+        title = "\(countries[correctAnswer].uppercased()) / \(score)"
     }
     
     func drawButtonBorder(for button: UIButton) {
@@ -49,8 +50,26 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
         
+        questionsAnswered += 1
+        
         score = sender.tag == correctAnswer ? score + 1 : score - 1
         title = sender.tag == correctAnswer ? "Correct" : "Wrong"
+        
+        if questionsAnswered == 10 {
+            let ac = UIAlertController(title: "Congrats!", message: "You've answered \(questionsAnswered) questions.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: askQuestion))
+            
+            present(ac, animated: true)
+        }
+        
+        // They got the wrong answer
+        if sender.tag != correctAnswer {
+            let ac = UIAlertController(title: "Wrong Flag", message: "You selected the \(countries[sender.tag]) flag.This is not the \(countries[correctAnswer]) flag.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            
+            present(ac, animated: true)
+            return
+        }
         
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
