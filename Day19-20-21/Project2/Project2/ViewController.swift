@@ -23,6 +23,8 @@ class ViewController: UIViewController {
 
         countries += ["estonia","france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "uk", "us"]
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(shareScoreTapped))
+        
         drawButtonBorder(for: button1)
         drawButtonBorder(for: button2)
         drawButtonBorder(for: button3)
@@ -75,6 +77,12 @@ class ViewController: UIViewController {
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         
         present(ac, animated: true)
+    }
+    
+    @objc func shareScoreTapped() {
+        let vc = UIAlertController(title: "Score", message: "Your current score is \(score).", preferredStyle: .alert)
+        vc.addAction(UIAlertAction(title: "OK", style: .default))
+        present(vc, animated: true)
     }
     
 }
