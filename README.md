@@ -40,4 +40,4 @@ https://www.hackingwithswift.com/100
 | 22   | Project 3 | ✅       | ![Screen Recording 2024-04-05 at 14 40 49](https://github.com/alsonick/100-days-of-swift/assets/101022772/58747e6b-ffb8-437d-a097-bad1843f37cf) |
 | 23   | Milestone: Projects 1-3 | ✅       | ![Screen Recording 2024-04-06 at 20 07 32](https://github.com/alsonick/100-days-of-swift/assets/101022772/435206b3-6456-4082-b1e5-2c93a6b60d0b) |
 | 24   | Project 4, part one | ✅       | ![Screen Recording 2024-04-07 at 17 42 57](https://github.com/alsonick/100-days-of-swift/assets/101022772/dfdcc02e-b34c-4edb-b143-f395292d1c62) |
-| 25   | Project 4, part two | ✅       | Preview not available. |
+| 25   | Project 4, part two | ✅       | ![Screen Recording 2024-04-08 at 14 23 46](https://github.com/alsonick/100-days-of-swift/assets/101022772/66880983-59f1-4252-8d75-88637ebe4d0a) |
