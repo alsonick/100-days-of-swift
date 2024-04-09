@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1C585A42BC5DB2000EF06AA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C585A32BC5DB2000EF06AA /* DetailViewController.swift */; };
 		E1F0CEF22BC2FAE000857049 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0CEF12BC2FAE000857049 /* AppDelegate.swift */; };
 		E1F0CEF42BC2FAE000857049 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0CEF32BC2FAE000857049 /* SceneDelegate.swift */; };
 		E1F0CEF62BC2FAE000857049 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0CEF52BC2FAE000857049 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1C585A32BC5DB2000EF06AA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E1F0CEEE2BC2FAE000857049 /* Project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F0CEF12BC2FAE000857049 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1F0CEF32BC2FAE000857049 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E1F0CEFA2BC2FAE100857049 /* Assets.xcassets */,
 				E1F0CEFC2BC2FAE100857049 /* LaunchScreen.storyboard */,
 				E1F0CEFF2BC2FAE100857049 /* Info.plist */,
+				E1C585A32BC5DB2000EF06AA /* DetailViewController.swift */,
 			);
 			path = Project4;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				E1F0CEF62BC2FAE000857049 /* ViewController.swift in Sources */,
 				E1F0CEF22BC2FAE000857049 /* AppDelegate.swift in Sources */,
 				E1F0CEF42BC2FAE000857049 /* SceneDelegate.swift in Sources */,
+				E1C585A42BC5DB2000EF06AA /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
