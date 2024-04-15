@@ -18,7 +18,12 @@ class ViewController: UITableViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(clearShoppingList))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Clear",
+            style: .plain,
+            target: self,
+            action: #selector(clearShoppingList)
+        )
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
@@ -63,8 +68,15 @@ class ViewController: UITableViewController {
     }
     
     @objc func clearShoppingList() {
-        shoppingList.removeAll(keepingCapacity: false)
-        tableView.reloadData()
+        let ac = UIAlertController(title: "Are You Sure?", message: "This action is irreversible, are you sure you want to continue?", preferredStyle: .alert)
+        
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(UIAlertAction(title: "Clear", style: .destructive, handler: { _ in
+            self.shoppingList.removeAll(keepingCapacity: false)
+            self.tableView.reloadData()
+        }))
+        
+        present(ac, animated: true)
     }
                                                         
     
