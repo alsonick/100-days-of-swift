@@ -9,12 +9,16 @@ import UIKit
 
 class ViewController: UITableViewController {
     
+    var filteredPetitions = [Petition]()
     var petitions = [Petition]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var urlString: String
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credit", style: .plain, target: self, action: #selector(showCreditAlert))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchAlert))
         
         if navigationController?.tabBarItem.tag == 0 {
             urlString = "https://hackingwithswift.com/samples/petitions-1.json"
@@ -30,6 +34,34 @@ class ViewController: UITableViewController {
         }
         
         showError()
+    }
+    
+    @objc func showSearchAlert() {
+        let ac = UIAlertController(title: "Filter", message: "What petitions would you like to see?", preferredStyle: .alert)
+        ac.addTextField()
+        
+        let searchAction = UIAlertAction(title: "Search", style: .default) { [weak self, weak ac] action in
+            
+            guard let search = ac?.textFields?[0].text else { return }
+            
+            self?.filteredPetitions = self?.petitions.filter({ petition in
+                return petition.title.lowercased().contains(search.lowercased())
+            }) ?? []
+            
+            self?.petitions = self?.filteredPetitions ?? []
+            self?.tableView.reloadData()
+        }
+        
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(searchAction)
+        
+        present(ac, animated: true)
+    }
+    
+    @objc func showCreditAlert() {
+        let ac = UIAlertController(title: "Credit", message: "This data comes from the We The People APIe of the Whitehouse.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
     }
     
     func showError() {
