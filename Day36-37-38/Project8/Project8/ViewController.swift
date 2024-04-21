@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var activatedButtons = [UIButton]()
     var solutions = [String]()
     
+    var questionsAnswered = 0
     var score = 0 {
         didSet {
             scoreLabel.text = "Score: \(score)"
@@ -144,6 +145,8 @@ class ViewController: UIViewController {
     @objc func submitTapped(_ sender: UIButton) {
         guard let answerText = currentAnswer.text else { return }
         
+        questionsAnswered += 1
+        
         if let solutionPosition = solutions.firstIndex(of: answerText) {
             activatedButtons.removeAll()
             
@@ -154,11 +157,17 @@ class ViewController: UIViewController {
             currentAnswer.text = ""
             score += 1
             
-            if score % 7 == 0 {
+            if questionsAnswered % 7 == 0 {
                 let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
                 present(ac, animated: true)
             }
+        } else {
+            score -= 1
+            
+            let errorAlert = UIAlertController(title: "Wrong", message: "This is not the correct answer.", preferredStyle: .alert)
+            errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(errorAlert, animated: true)
         }
     }
     
@@ -218,6 +227,8 @@ class ViewController: UIViewController {
         if letterButtons.count == letterBits.count {
             for i in 0..<letterButtons.count {
                 letterButtons[i].setTitle(letterBits[i], for: .normal)
+                letterButtons[i].layer.borderWidth = 1.0
+                letterButtons[i].layer.borderColor = UIColor.gray.cgColor
             }
         }
     }
