@@ -11,7 +11,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 38              | 62       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 39              | 61       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -54,6 +54,5 @@ https://www.hackingwithswift.com/100
 | 36   | Project 8, part one | ✅       | <img width="244" alt="Screenshot 2024-04-19 at 22 39 08" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/2cd0eb7f-e429-49d5-a4a9-6b30fb8a90bc"> |
 | 37   | Project 8, part two | ✅       | <img width="244" alt="Screenshot 2024-04-20 at 19 17 56" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/035719d4-51b8-496e-a10d-9da98810972f"> |
 | 38   | Project 8, part three | ✅       | Preview not available. |
-
-
+| 39   | Project 9, part one | ✅       | Preview not available. |
 
