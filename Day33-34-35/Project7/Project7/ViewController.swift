@@ -26,14 +26,28 @@ class ViewController: UITableViewController {
             urlString = "https://hackingwithswift.com/samples/petitions-2.json"
         }
         
-        if let url = URL(string: urlString) {
-            if let data = try? Data(contentsOf: url) {
-                parse(json: data)
-                return
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            if let url = URL(string: urlString) {
+                if let data = try? Data(contentsOf: url) {
+                    self?.parse(json: data)
+                    return
+                }
             }
+            
+            self?.showError()
         }
+    }
+    
+    func filterPetitions(search: String) {
+        filteredPetitions = petitions.filter({ petition in
+            return petition.title.lowercased().contains(search.lowercased())
+        })
         
-        showError()
+        petitions = filteredPetitions
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     @objc func showSearchAlert() {
@@ -41,15 +55,11 @@ class ViewController: UITableViewController {
         ac.addTextField()
         
         let searchAction = UIAlertAction(title: "Search", style: .default) { [weak self, weak ac] action in
-            
             guard let search = ac?.textFields?[0].text else { return }
             
-            self?.filteredPetitions = self?.petitions.filter({ petition in
-                return petition.title.lowercased().contains(search.lowercased())
-            }) ?? []
-            
-            self?.petitions = self?.filteredPetitions ?? []
-            self?.tableView.reloadData()
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                self?.filterPetitions(search: search)
+            }
         }
         
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -75,7 +85,10 @@ class ViewController: UITableViewController {
         
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
-            tableView.reloadData()
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
         }
     }
     
