@@ -11,7 +11,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 41              | 59       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 42              | 58       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -57,3 +57,4 @@ https://www.hackingwithswift.com/100
 | 39   | Project 9, part one | ✅       | Preview not available. |
 | 40   | Project 9, part two | ✅       | Preview not available. |
 | 41   | Milestone: Projects 7-9 | ❌       | Preview not available. |
+| 42   | Project 10, part one | ✅       | Preview not available. |
