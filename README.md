@@ -58,4 +58,4 @@ https://www.hackingwithswift.com/100
 | 40   | Project 9, part two | ✅       | Preview not available. |
 | 41   | Milestone: Projects 7-9 | ❌       | Preview not available. |
 | 42   | Project 10, part one | ✅       | <img width="244" alt="Screenshot 2024-04-26 at 20 50 51" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/806ae157-cbb3-4160-b0c1-a3f9b8f308cc"> |
-| 43   | Project 10, part two | ✅       | Preview not available. |
+| 43   | Project 10, part two | ✅       | ![Screen Recording 2024-04-26 at 21 24 54](https://github.com/alsonick/100-days-of-swift/assets/101022772/e0dc3278-2bd4-4e81-b149-e7383617cee1) |
