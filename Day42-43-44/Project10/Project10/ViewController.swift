@@ -21,6 +21,7 @@ class ViewController: UICollectionViewController {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
+//        picker.sourceType = .camera
         present(picker, animated: true)
     }
     
@@ -29,11 +30,7 @@ class ViewController: UICollectionViewController {
         return paths[0]
     }
     
-    // MARK: - Collection View Data Source Methods
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let person = people[indexPath.item]
-        
+    func rename(person: Person) {
         let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
         ac.addTextField()
         
@@ -46,6 +43,32 @@ class ViewController: UICollectionViewController {
         })
         
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        present(ac, animated: true)
+    }
+    
+    func delete(item: Int) {
+        people.remove(at: item)
+        
+        collectionView.reloadData()
+    }
+    
+    // MARK: - Collection View Data Source Methods
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let person = people[indexPath.item]
+        let item = indexPath.item
+        
+        // Ask the user if they want to rename the person or delete them
+        let ac = UIAlertController(title: "Person selected", message: "Would you like to rename or delete this person?", preferredStyle: .alert)
+        
+        ac.addAction(UIAlertAction(title: "Rename", style: .default, handler: { [weak self] _ in
+            self?.rename(person: person)
+        }))
+        
+        ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
+            self?.delete(item: item)
+        }))
         
         present(ac, animated: true)
     }
