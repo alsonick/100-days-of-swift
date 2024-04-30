@@ -14,6 +14,7 @@
 		E15F65DC2BDEC0AB00599C62 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E15F65DB2BDEC0AB00599C62 /* Base */; };
 		E15F65DE2BDEC0AC00599C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15F65DD2BDEC0AC00599C62 /* Assets.xcassets */; };
 		E15F65E12BDEC0AC00599C62 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E15F65E02BDEC0AC00599C62 /* Base */; };
+		E17719EB2BE1944100F51CD4 /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = E17719EA2BE1944100F51CD4 /* FireParticles.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E15F65DB2BDEC0AB00599C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E15F65DD2BDEC0AC00599C62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15F65E02BDEC0AC00599C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E17719EA2BE1944100F51CD4 /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				E15F65DA2BDEC0AB00599C62 /* Main.storyboard */,
 				E15F65DD2BDEC0AC00599C62 /* Assets.xcassets */,
 				E15F65DF2BDEC0AC00599C62 /* LaunchScreen.storyboard */,
+				E17719EA2BE1944100F51CD4 /* FireParticles.sks */,
 			);
 			path = Project11;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			files = (
 				E15F65D32BDEC0AB00599C62 /* GameScene.sks in Resources */,
 				E15F65DC2BDEC0AB00599C62 /* Base in Resources */,
+				E17719EB2BE1944100F51CD4 /* FireParticles.sks in Resources */,
 				E15F65DE2BDEC0AC00599C62 /* Assets.xcassets in Resources */,
 				E15F65E12BDEC0AC00599C62 /* Base in Resources */,
 			);
