@@ -15,14 +15,6 @@ class ViewController: UICollectionViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
-        
-        let defaults = UserDefaults.standard
-        
-        if let savedPeople = defaults.object(forKey: "people") as? Data {
-            if let decodedPeople = try? NSKeyedUnarchiver.unarchiveObject(with: savedPeople) as? [Person] {
-                people = decodedPeople
-            }
-        }
     }
     
     @objc func addNewPerson() {
@@ -46,7 +38,6 @@ class ViewController: UICollectionViewController {
             guard let newName = ac?.textFields?[0].text else { return }
             
             person.name = newName
-            self?.save()
             
             self?.collectionView.reloadData()
         })
@@ -60,13 +51,6 @@ class ViewController: UICollectionViewController {
         people.remove(at: item)
         
         collectionView.reloadData()
-    }
-    
-    func save() {
-        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
-            let defaults = UserDefaults.standard
-            defaults.setValue(savedData, forKey: "people")
-        }
     }
     
     // MARK: - Collection View Data Source Methods
@@ -131,8 +115,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         let person = Person(name: "Unknown", image: imageName)
         people.append(person)
         collectionView.reloadData()
-        
-        save()
         
         dismiss(animated: true)
     }
