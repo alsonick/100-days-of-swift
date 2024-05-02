@@ -23,6 +23,18 @@ class ViewController: UICollectionViewController {
                 people = decodedPeople
             }
         }
+        
+        let defaults = UserDefaults.standard
+        
+        if let savedPeople = defaults.object(forKey: "people") as? Data {
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                people = try jsonDecoder.decode([Person].self, from: savedPeople)
+            } catch {
+                print("Failed to load people.")
+            }
+        }
     }
     
     @objc func addNewPerson() {
@@ -63,9 +75,13 @@ class ViewController: UICollectionViewController {
     }
     
     func save() {
-        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
+        let jsonEncoder = JSONEncoder()
+        
+        if let savedData = try? jsonEncoder.encode(people) {
             let defaults = UserDefaults.standard
             defaults.setValue(savedData, forKey: "people")
+        } else {
+            print("Failed to save people.")
         }
     }
     
@@ -130,9 +146,8 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         
         let person = Person(name: "Unknown", image: imageName)
         people.append(person)
-        collectionView.reloadData()
-        
         save()
+        collectionView.reloadData()
         
         dismiss(animated: true)
     }
