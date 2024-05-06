@@ -68,4 +68,4 @@ https://www.hackingwithswift.com/100
 | 50   | Milestone: Projects 10-12 | ✅       | ![Screen Recording 2024-05-03 at 17 15 25](https://github.com/alsonick/100-days-of-swift/assets/101022772/1caa778a-ddb2-4c88-96a1-a5d787df1e83) |
 | 51   | Expanding your horizons | ✅       | Preview not available. |
 | 52   | Project 13, part one | ✅       | <img width="244" alt="Screenshot 2024-05-05 at 22 42 57" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/6bfc2b2a-12dc-4025-908c-37da905a9f83"> |
-| 53   | Project 13, part two | ✅       | Preview not available. |
+| 53   | Project 13, part two | ✅       | ![Screen Recording 2024-05-06 at 20 35 35](https://github.com/alsonick/100-days-of-swift/assets/101022772/82716206-b430-4cda-b1b9-20a2c5360573) |
