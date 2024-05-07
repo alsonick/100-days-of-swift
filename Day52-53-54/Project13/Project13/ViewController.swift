@@ -12,11 +12,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var intensity: UISlider!
+    @IBOutlet var changeFilterButton: UIButton!
     
-    var currentImage: UIImage!
-    
-    var context: CIContext!
     var currentFilter: CIFilter!
+    var currentImage: UIImage!
+    var context: CIContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +80,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        changeFilterButton.setTitle(actionTitle, for: .normal)
         
         applyProcessing()
     }
@@ -90,7 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         for title in ["CIBumpDistortion", "CIGaussianBlur", "CIPixellate", "CISepiaTone", "CITwirlDistortion", "CIUnsharpMask", "CIVignette"] {
             ac.addAction(UIAlertAction(title: title, style: .default, handler: setFilter))
         }
-        
+                
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
         if let popoverController = ac.popoverPresentationController {
@@ -102,7 +103,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func save(_ sender: UIButton) {
-        guard let image = imageView.image else { return }
+        guard let image = imageView.image else {
+            let ac = UIAlertController(title: "No images selected", message: "Please select an image to continue.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+            return
+        }
         
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
