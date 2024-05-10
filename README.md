@@ -72,4 +72,4 @@ https://www.hackingwithswift.com/100
 | 54   | Project 13, part three | ✅       | ![Screen Recording 2024-05-07 at 16 18 56](https://github.com/alsonick/100-days-of-swift/assets/101022772/17139947-2b54-4dab-bc2b-19da3a7bec10) |
 | 55   | Project 14, part one | ✅       | ![Screen Recording 2024-05-08 at 14 45 03](https://github.com/alsonick/100-days-of-swift/assets/101022772/d830ff1c-754a-4c0c-859b-33a517603aa3) |
 | 56   | Project 14, part two | ✅       | ![Screen Recording 2024-05-09 at 22 50 01](https://github.com/alsonick/100-days-of-swift/assets/101022772/d102df0a-9042-4183-98fd-85e28ad7ef7d) |
-| 57   | Project 15, part one | ✅       | Preview not available. |
+| 57   | Project 15, part one | ✅       | ![Screen Recording 2024-05-10 at 22 12 01](https://github.com/alsonick/100-days-of-swift/assets/101022772/83a3a365-4a07-4ef5-843b-e7dbea035774) |
