@@ -41,6 +41,10 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
+        for button in [button1, button2, button3] {
+            button?.transform = .identity
+        }
+        
         title = "\(countries[correctAnswer].uppercased()) / \(score)"
     }
     
@@ -63,6 +67,13 @@ class ViewController: UIViewController {
             
             present(ac, animated: true)
         }
+        
+        // Button animation
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: []) {
+            sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        } completion: { _ in
+        }
+
         
         // They got the wrong answer
         if sender.tag != correctAnswer {
