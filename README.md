@@ -75,4 +75,9 @@ https://www.hackingwithswift.com/100
 | 57   | Project 15, part one | ✅       | ![Screen Recording 2024-05-10 at 22 12 01](https://github.com/alsonick/100-days-of-swift/assets/101022772/83a3a365-4a07-4ef5-843b-e7dbea035774) |
 | 58   | Project 15, part two | ✅       | Preview not available. |
 | 59   | Milestone: Projects 13-15 | ✅       | ![Screen Recording 2024-05-12 at 21 11 35](https://github.com/alsonick/100-days-of-swift/assets/101022772/563cdd2e-8b7e-4690-ac4a-3f6e4ac115c0) |
-| 60   | Project 16, part one | ✅       | Preview not available. |
+| 60   | Project 16, part one | ✅       | ![Screen Recording 2024-05-13 at 23 29 17](https://github.com/alsonick/100-days-of-swift/assets/101022772/93eb3fab-bb2c-4a6c-ad5f-e4f23a4c6434) |
+
+
+
+
+
