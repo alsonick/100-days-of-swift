@@ -1,4 +1,4 @@
-![Screen Recording 2024-05-15 at 22 29 40](https://github.com/alsonick/100-days-of-swift/assets/101022772/cb52fd79-c5f8-41c3-8efc-02f5a0dffd05)# 100 Days of Swift (HackingWithSwift)
+# 100 Days of Swift (HackingWithSwift)
 
 This repository is a collection of all the projects and solutions from Paul Hudson's 100 days of swift challenge.
 
