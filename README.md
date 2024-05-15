@@ -11,7 +11,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 61              | 39       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 62              | 38       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -77,3 +77,4 @@ https://www.hackingwithswift.com/100
 | 59   | Milestone: Projects 13-15 | ✅       | ![Screen Recording 2024-05-12 at 21 11 35](https://github.com/alsonick/100-days-of-swift/assets/101022772/563cdd2e-8b7e-4690-ac4a-3f6e4ac115c0) |
 | 60   | Project 16, part one | ✅       | ![Screen Recording 2024-05-13 at 23 29 17](https://github.com/alsonick/100-days-of-swift/assets/101022772/93eb3fab-bb2c-4a6c-ad5f-e4f23a4c6434) |
 | 61   | Project 16, part two | ✅       | ![Screen Recording 2024-05-14 at 21 54 04](https://github.com/alsonick/100-days-of-swift/assets/101022772/6df2ee6a-e05f-4a0e-8c3d-30e1345ea02b) |
+| 62   | Project 17, part one | ✅       | Preview not available. |
