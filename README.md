@@ -2,6 +2,8 @@
 
 This repository is a collection of all the projects and solutions from Paul Hudson's 100 days of swift challenge.
 
+> Note: I won't complete any challenges that involve game development as I don't have any interest in that sector of iOS development.
+
 **Useful links:**
 
 https://notnick.io/challenge/100-days-of-swift
@@ -11,7 +13,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 62              | 38       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 63              | 37       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -78,6 +80,4 @@ https://www.hackingwithswift.com/100
 | 60   | Project 16, part one | ✅       | ![Screen Recording 2024-05-13 at 23 29 17](https://github.com/alsonick/100-days-of-swift/assets/101022772/93eb3fab-bb2c-4a6c-ad5f-e4f23a4c6434) |
 | 61   | Project 16, part two | ✅       | ![Screen Recording 2024-05-14 at 21 54 04](https://github.com/alsonick/100-days-of-swift/assets/101022772/6df2ee6a-e05f-4a0e-8c3d-30e1345ea02b) |
 | 62   | Project 17, part one | ✅       | ![Screen Recording 2024-05-15 at 22 29 40](https://github.com/alsonick/100-days-of-swift/assets/101022772/763488a3-7064-4e61-b297-b1163db7cf80) |
-
-
-
+| 63   | Project 17, part two | ❌       | Preview not available. |
