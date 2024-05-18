@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assert(selectedImage != nil, "We need an image.")
+        
 
         if let position = selectedImagePosition, let count = numberOfImagesCount {
             title = "Picture \(position + 1) of \(count)"
