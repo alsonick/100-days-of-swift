@@ -85,4 +85,4 @@ https://www.hackingwithswift.com/100
 | 65   | Project 18, part two | ✅       | Preview not available. |
 | 66   | Milestone: Projects 16-18 | ❌       | Preview not available. |
 | 67   | Project 19, part one | ✅       | Preview not available. |
-| 68   | Project 19, part two | ✅       | Preview not available. |
+| 68   | Project 19, part two | ✅       | ![Screen Recording 2024-05-21 at 21 19 14](https://github.com/alsonick/100-days-of-swift/assets/101022772/27e14f90-1d5f-489b-9b50-363c39bc3548) |
