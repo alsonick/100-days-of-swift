@@ -89,4 +89,6 @@ https://www.hackingwithswift.com/100
 | 69   | Project 19, part three | ❌       | Preview not available. |
 | 70   | Project 20, part one | ✅       | ![Screen Recording 2024-05-23 at 21 59 24](https://github.com/alsonick/100-days-of-swift/assets/101022772/0ae9b041-fea0-4cba-b1ba-caf92d720d9b) |
 | 71   | Project 20, part two | ✅       | Preview not available. |
-| 72   | Project 21, part one | ✅       | Preview not available. |
+| 72   | Project 21, part one | ✅       | <img width="244" alt="Screenshot 2024-05-25 at 22 25 07" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/b4eff0b5-bfa1-4b8c-9bf8-9285d0df8a49"> |
+
+
