@@ -8,6 +8,8 @@
 import CoreLocation
 import UIKit
 
+// NOTE: The beacon app wasn't able to detect any beacons so I'm unable to test this.
+
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var distanceReading: UILabel!
@@ -62,10 +64,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        var alertShow = false
+        
         if let beacon = beacons.first {
             update(distance: beacon.proximity)
+            alertShow = true
         } else {
             update(distance: .unknown)
+            alertShow = false
+        }
+        
+        if alertShow {
+            let ac = UIAlertController(title: "Detection spotted.", message: "A beacon was spotted", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
         }
     }
 
