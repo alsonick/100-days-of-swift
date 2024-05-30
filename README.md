@@ -94,4 +94,4 @@ https://www.hackingwithswift.com/100
 | 74   | Milestone: Projects 19-21 | ❌       | Preview not available. |
 | 75   | Project 22, part one | ✅       | Preview not available. |
 | 76   | Project 22, part two | ✅       | Preview not available. |
-| 77   | Project 23, part one | ✅       | Preview not available. |
+| 77   | Project 23, part one | ✅       | ![Screen Recording 2024-05-30 at 14 34 56](https://github.com/alsonick/100-days-of-swift/assets/101022772/2a202405-7c2b-439a-8d23-7385900a0646) |
