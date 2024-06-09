@@ -103,4 +103,4 @@ https://www.hackingwithswift.com/100
 | 83   | Project 25, part one | ✅       | Preview not available. |
 | 84   | Project 25, part two | ❌       | Preview not available. |
 | 85   | Project 26, part one | ✅       | <img width="244" alt="Screenshot 2024-06-09 at 15 08 26" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/50f26f5f-fa68-4cde-afaa-7fe5df76150f"> |
-| 86   | Project 26, part two | ✅       | Preview not available. |
+| 86   | Project 26, part two | ✅       | ![Screen Recording 2024-06-09 at 18 27 14](https://github.com/alsonick/100-days-of-swift/assets/101022772/8a2a2de1-10a3-4e12-a001-8e542f521701) |
