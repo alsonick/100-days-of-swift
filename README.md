@@ -109,4 +109,4 @@ https://www.hackingwithswift.com/100
 | 89   | Project 27, part two | ❌       | Preview not available. |
 | 90   | Milestone: Projects 25-27 | ❌       | Preview not available. |
 | 91   | Core Graphics redux | ✅       | Preview not available. |
-| 92   | Project 28, part one | ✅       | Preview not available. |
+| 92   | Project 28, part one | ✅       | ![Screen Recording 2024-06-12 at 13 07 27](https://github.com/alsonick/100-days-of-swift/assets/101022772/c0eb6463-8427-4cf8-b040-c52a64b4ff21) |
