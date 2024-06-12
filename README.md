@@ -13,7 +13,7 @@ https://www.hackingwithswift.com/100
 **Status**
 | Name                              | Days Completed | Days Left | Goal     |      
 | :---:                             | :----:         | :---:     | :---:    |
-| 100 Days of Swift (HackingWithSwift) | 92              | 8       | 100 Days |
+| 100 Days of Swift (HackingWithSwift) | 93              | 7       | 100 Days |
 
 **Challenge**
 | Day | Topic                              | Completed | Preview                |      
@@ -110,3 +110,4 @@ https://www.hackingwithswift.com/100
 | 90   | Milestone: Projects 25-27 | ❌       | Preview not available. |
 | 91   | Core Graphics redux | ✅       | Preview not available. |
 | 92   | Project 28, part one | ✅       | ![Screen Recording 2024-06-12 at 13 07 27](https://github.com/alsonick/100-days-of-swift/assets/101022772/c0eb6463-8427-4cf8-b040-c52a64b4ff21) |
+| 93   | Project 28, part two | ❌       | Preview not available. |
