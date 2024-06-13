@@ -111,4 +111,4 @@ https://www.hackingwithswift.com/100
 | 91   | Core Graphics redux | ✅       | Preview not available. |
 | 92   | Project 28, part one | ✅       | ![Screen Recording 2024-06-12 at 13 07 27](https://github.com/alsonick/100-days-of-swift/assets/101022772/c0eb6463-8427-4cf8-b040-c52a64b4ff21) |
 | 93   | Project 28, part two | ❌       | Preview not available. |
-| 94   | Project 29, part one | ✅       | Preview not available. |
+| 94   | Project 29, part one | ✅       | <img width="244" alt="Screenshot 2024-06-13 at 15 50 07" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/2eb9c00f-a338-4ab2-9b70-a27ae8497ee0"> |
