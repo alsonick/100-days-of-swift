@@ -115,4 +115,4 @@ https://www.hackingwithswift.com/100
 | 95   | Project 29, part two | ✅       | ![Screen Recording 2024-06-18 at 14 54 06](https://github.com/alsonick/100-days-of-swift/assets/101022772/f5a92f5d-8a18-4d7f-9eee-2df864e5ab6a) |
 | 96   | Project 29, part three | ❌       | Preview not available. |
 | 97   | Project 30, part one | ✅       | <img width="244" alt="Screenshot 2024-06-18 at 17 08 30" src="https://github.com/alsonick/100-days-of-swift/assets/101022772/a668231e-8982-4643-9956-2d05e90bebee"> |
-| 98   | Project 30, part two | ✅       | Preview not available. |
+| 98   | Project 30, part two | ❌       | Preview not available. |
