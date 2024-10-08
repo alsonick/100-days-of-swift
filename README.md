@@ -1,6 +1,6 @@
 # 100 Days of Swift (HackingWithSwift)
 
-This repository is a collection of all the projects and solutions from Paul Hudson's 100 days of swift challenge.
+This repository is a collection of all the projects and solutions from Paul Hudson's 100 days of Swift challenge.
 
 > Note: I won't complete any challenges that involve game development as I don't have any interest in that sector of iOS development.
 
